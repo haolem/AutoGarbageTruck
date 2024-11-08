@@ -27,6 +27,9 @@ app.get('/qs/:spec', (req, res) => {
 app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'error_404.html'));
   });
-app.listen(80, () => {
+
+const PORT = process.env.PORT || 80
+
+app.listen(PORT, () => {
     console.log('Server is running on port 80')
 })
