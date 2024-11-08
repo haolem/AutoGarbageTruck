@@ -28,7 +28,7 @@ app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'error_404.html'));
   });
 
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
     console.log('Server is running on port 80')
