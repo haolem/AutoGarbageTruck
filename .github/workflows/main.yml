@@ -3,7 +3,7 @@ name: build-and-deploy
 on:
   push:
     branches:
-      - main  # Trigger the workflow on pushes to the main branch
+      - main  # Trigger on pushes to the main branch
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Specify Node.js 20 explicitly
+          node-version: '20'  # Explicitly use Node.js 20
 
       # Install dependencies
       - name: Install dependencies
@@ -27,9 +27,3 @@ jobs:
       # Build the application
       - name: Build application
         run: npm run build
-
-      # Deploy the built files (replace this with your actual deployment process)
-      - name: Deploy
-        run: |
-          # Example command to deploy, replace with actual deployment script
-          echo "Deploying application..."
