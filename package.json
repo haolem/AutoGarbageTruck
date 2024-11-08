@@ -1,0 +1,27 @@
+{
+  "name": "guild-use-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haolem/AutoGarbageTruck.git"
+  },
+  "keywords": [
+    "AGT_App"
+  ],
+  "author": "Le Minh Hao",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/haolem/AutoGarbageTruck/issues"
+  },
+  "homepage": "https://github.com/haolem/AutoGarbageTruck#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.14.5"
+  }
+}
