@@ -1,32 +1,35 @@
-
-name: Deploy Node.js App to GitHub Pages
+name: build-and-deploy
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      # Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '20'  # Specify Node.js 20 explicitly
 
+      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      - name: Build the app
+      # Build the application
+      - name: Build application
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+      # Deploy the built files (replace this with your actual deployment process)
+      - name: Deploy
+        run: |
+          # Example command to deploy, replace with actual deployment script
+          echo "Deploying application..."
